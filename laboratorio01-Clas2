@@ -1,0 +1,45 @@
+package laboratorioJavaStandard;
+
+import java.util.Scanner;
+
+public class Laboratorio1Clase2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+int cantidadPersonas = 0;
+System.out.println("Cuantas Personas ingresara en la lista? ");
+cantidadPersonas = sc.nextInt();
+int[]  personas;
+personas = new int[cantidadPersonas ]; 
+		
+	Persona persona1 = new Persona("Ignacio", "Elisii", "DNI", 25);
+	
+}
+
+}
+
+
+
+class  Persona{
+private	String nombre;
+private String apellido; 
+private String tipoDocumento;
+private int   edad; 
+
+
+public Persona(String nombre,String apellido, String tipoDocumento, int edad) {
+this.nombre = nombre;
+this.apellido = apellido; 
+this.tipoDocumento = tipoDocumento;
+this.edad = edad;
+
+}
+
+
+public String getEstado(){
+return nombre + " " + apellido+ " " +  tipoDocumento + " " + edad; 
+}
+
+
+
+}
