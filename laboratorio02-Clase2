@@ -1,0 +1,124 @@
+import java.util.Scanner;
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+		Scanner sc = new Scanner(System.in);
+		int cantidadPersonas = 0;
+		System.out.println("Cuantas Personas ingresara en la lista? ");
+		cantidadPersonas = sc.nextInt();
+		Persona personas[];
+
+		personas = new Persona[cantidadPersonas];
+		for (int i = 0; i < cantidadPersonas; i++) {
+			personas[i] = new Persona();
+			System.out.print("Nombre ");
+			personas[i].setNombre(sc.next());
+			System.out.println("Apellido ");
+			personas[i].setApellido(sc.next());
+			System.out.println("Tipo de Documento y numero ");
+		
+			personas[i].getDni().setTipoDocumento(sc.next());
+			personas[i].getDni().setNumeroDocumenmto(sc.nextInt());
+
+			personas[i].setTipoDocumento(sc.next());
+			System.out.println("Edad ");
+			personas[i].setEdad(sc.nextInt());
+
+		}
+		for (int i = 0; i < cantidadPersonas; i++) {
+			System.out.println(personas[i].getEstado());
+			if (personas[i].getEdad() >= 18) {
+				System.out.println("Es mayor de edad");
+
+			} else if (personas[i].getEdad() < 18) {
+				System.out.println("Es menor de edad ");
+			}
+		}
+
+		sc.close();
+
+	}
+  public class DNI { 
+	  String tipoDocumento;
+	 int numeroDocumenmto;
+	 
+	 
+	public  String getTipoDocumento() {
+		return tipoDocumento;
+	}
+	public void setTipoDocumento(String tipoDocumento) {
+		this.tipoDocumento = tipoDocumento;
+	}
+	public int getNumeroDocumenmto() {
+		return numeroDocumenmto;
+    }
+    
+    
+    public class Persona {
+	private String nombre;
+	private String apellido;
+	private String tipoDocumento;
+	private int edad;
+	private DNI dni;
+
+	public DNI getDni() {
+		return dni;
+	}
+	public Persona() {
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getTipoDocumento() {
+		return tipoDocumento;
+	}
+
+	public void setTipoDocumento(String tipoDocumento) {
+		this.tipoDocumento = tipoDocumento;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public String getEstado() {
+		return nombre + " " + apellido + " " + tipoDocumento + " " + edad;
+	}
+
+}
+
+
+
+	}
+	public void setNumeroDocumenmto(int numeroDocumenmto) {
+		this.numeroDocumenmto = numeroDocumenmto;
+	}
+	public DNI(String tipoDocumento, int numeroDocumenmto) {
+		super();
+		
+	}
+  
+  
+  
