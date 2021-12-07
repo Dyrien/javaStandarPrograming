@@ -55,6 +55,14 @@ public class App {
 	}
 	public int getNumeroDocumenmto() {
 		return numeroDocumenmto;
+		
+	}
+	public void setNumeroDocumenmto(int numeroDocumenmto) {
+		this.numeroDocumenmto = numeroDocumenmto;
+	}
+	public DNI(String tipoDocumento, int numeroDocumenmto) {
+		super();	
+	}
     }
     
     
@@ -111,14 +119,7 @@ public class App {
 
 
 
-	}
-	public void setNumeroDocumenmto(int numeroDocumenmto) {
-		this.numeroDocumenmto = numeroDocumenmto;
-	}
-	public DNI(String tipoDocumento, int numeroDocumenmto) {
-		super();
-		
-	}
+	
   
   
   
